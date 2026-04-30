@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         xRotation -= mouseY; // Invertir el eje Y para comportamiento estándar
         xRotation = Mathf.Clamp(xRotation, -89.9f, 89.9f); // Limitar la vista vertical
         yRotation -= mouseX;
-        this.transform.localRotation = Quaternion.Euler(0, -yRotation, 0);
+        this.transform.localRotation = Quaternion.Euler(0, -yRotation * (16/9), 0);
         camera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Rotar cámara vertical
     }
 

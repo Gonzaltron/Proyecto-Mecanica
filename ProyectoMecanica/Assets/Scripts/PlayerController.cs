@@ -65,11 +65,11 @@ public class PlayerController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime;
 
-        xRotation -= mouseY; // Invertir el eje Y para comportamiento estándar
+        xRotation -= mouseY; // Invertir el eje Y para comportamiento estï¿½ndar
         xRotation = Mathf.Clamp(xRotation, -89.9f, 89.9f); // Limitar la vista vertical
         yRotation -= mouseX;
-        this.transform.localRotation = Quaternion.Euler(0, -yRotation * (16/9), 0);
-        camera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Rotar cámara vertical
+        this.transform.rotation = Quaternion.Euler(0, -yRotation, 0);
+        camera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // Rotar cï¿½mara vertical
     }
 
 

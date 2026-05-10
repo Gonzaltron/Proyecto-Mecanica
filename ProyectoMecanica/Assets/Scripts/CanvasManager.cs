@@ -34,6 +34,7 @@ public class CanvasManager : MonoBehaviour
         pause.enabled = true;
         Time.timeScale = 0;
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Unpause()
@@ -42,6 +43,7 @@ public class CanvasManager : MonoBehaviour
         pause.enabled = false;
         Time.timeScale = 1;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void MainToOptions()
@@ -70,6 +72,7 @@ public class CanvasManager : MonoBehaviour
         game.enabled = true;
         Time.timeScale = 1;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Exit()
